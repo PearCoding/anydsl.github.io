@@ -56,7 +56,7 @@ auto cmp = world.relop_cmp_eq(main->param(0), world.literal_u32(0));
 // wire lambdas
 main->branch(cmp, if_then, if_else);
 if_then->jump(next, {world.literal_u32(23)});
-if_else->jump(next, {world.literal_u32(23)});
+if_else->jump(next, {world.literal_u32(42)});
 next->jump(main->param(1), {next->param(0)});
 ```
 
